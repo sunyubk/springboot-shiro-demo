@@ -1,9 +1,9 @@
-package com.ncpe.digitaldelivery.codegenerator.service.impl;
+package com.sy.springbootshirodemo.service.impl;
 
-import com.ncpe.digitaldelivery.codegenerator.entity.Role;
-import com.ncpe.digitaldelivery.codegenerator.mapper.RoleMapper;
-import com.ncpe.digitaldelivery.codegenerator.service.RoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.sy.springbootshirodemo.entity.Role;
+import com.sy.springbootshirodemo.mapper.RoleMapper;
+import com.sy.springbootshirodemo.service.RoleService;
 import org.springframework.stereotype.Service;
 
 /**

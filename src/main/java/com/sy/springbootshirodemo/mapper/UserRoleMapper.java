@@ -1,7 +1,7 @@
 package com.sy.springbootshirodemo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.sy.springbootshirodemo.entity.ShitoUserRole;
+import com.sy.springbootshirodemo.entity.UserRole;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -13,6 +13,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2023-09-22
  */
 @Mapper
-public interface ShitoUserRoleMapper extends BaseMapper<ShitoUserRole> {
+public interface UserRoleMapper extends BaseMapper<UserRole> {
 
 }

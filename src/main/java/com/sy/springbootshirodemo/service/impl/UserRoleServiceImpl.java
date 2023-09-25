@@ -1,9 +1,9 @@
 package com.sy.springbootshirodemo.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.sy.springbootshirodemo.entity.ShitoUserRole;
-import com.sy.springbootshirodemo.mapper.ShitoUserRoleMapper;
-import com.sy.springbootshirodemo.service.ShitoUserRoleService;
+import com.sy.springbootshirodemo.entity.UserRole;
+import com.sy.springbootshirodemo.mapper.UserRoleMapper;
+import com.sy.springbootshirodemo.service.UserRoleService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2023-09-22
  */
 @Service
-public class ShitoUserRoleServiceImpl extends ServiceImpl<ShitoUserRoleMapper, ShitoUserRole> implements ShitoUserRoleService {
+public class UserRoleServiceImpl extends ServiceImpl<UserRoleMapper, UserRole> implements UserRoleService {
 
 }

@@ -1,7 +1,7 @@
-package com.ncpe.digitaldelivery.codegenerator.service;
+package com.sy.springbootshirodemo.service;
 
-import com.ncpe.digitaldelivery.codegenerator.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.sy.springbootshirodemo.entity.User;
 
 /**
  * <p>
@@ -13,4 +13,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface UserService extends IService<User> {
 
+    User findByUsername(String username);
+
+    User register(String username, String password);
 }

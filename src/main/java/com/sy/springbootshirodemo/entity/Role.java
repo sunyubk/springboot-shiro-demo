@@ -1,12 +1,13 @@
-package com.ncpe.digitaldelivery.codegenerator.entity;
+package com.sy.springbootshirodemo.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.io.Serializable;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.io.Serializable;
 
 /**
  * <p>
@@ -16,14 +17,12 @@ import lombok.Setter;
  * @author 
  * @since 2023-09-22
  */
-@Getter
-@Setter
+@Data
 @TableName("shiro_role")
-@ApiModel(value = "Role对象", description = "")
 public class Role implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @TableField("id")
+    @TableId("id")
     private String id;
     @TableField("name")
     private String name;

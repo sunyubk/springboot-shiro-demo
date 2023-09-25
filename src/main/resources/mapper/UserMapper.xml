@@ -3,7 +3,7 @@
 <mapper namespace="com.sy.springbootshirodemo.mapper.UserMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.sy.springbootshirodemo.entity.Permission">
+    <resultMap id="BaseResultMap" type="com.sy.springbootshirodemo.entity.User">
         <result column="id" property="id" />
         <result column="username" property="username" />
         <result column="password" property="password" />

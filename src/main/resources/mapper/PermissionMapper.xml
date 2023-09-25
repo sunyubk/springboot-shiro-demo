@@ -12,5 +12,12 @@
     <sql id="Base_Column_List">
         id, name, code
     </sql>
+    <select id="findPermissionByUserid" resultType="com.sy.springbootshirodemo.entity.Permission">
+        select *
+        from shiro_user_role ur
+                 left join shiro_role_permission rp on ur.rid = rp.rid
+                 left join shiro_permission p on ur.rid = p.id
+        where ur.uid = #{userId}
+    </select>
 
 </mapper>

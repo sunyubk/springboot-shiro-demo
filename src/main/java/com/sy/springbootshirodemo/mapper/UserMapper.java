@@ -1,7 +1,8 @@
-package com.ncpe.digitaldelivery.codegenerator.mapper;
+package com.sy.springbootshirodemo.mapper;
 
-import com.ncpe.digitaldelivery.codegenerator.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.sy.springbootshirodemo.entity.User;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author 
  * @since 2023-09-22
  */
+@Mapper
 public interface UserMapper extends BaseMapper<User> {
 
 }

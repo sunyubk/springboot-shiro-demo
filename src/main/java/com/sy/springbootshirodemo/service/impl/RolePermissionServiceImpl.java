@@ -1,9 +1,9 @@
-package com.ncpe.digitaldelivery.codegenerator.service.impl;
+package com.sy.springbootshirodemo.service.impl;
 
-import com.ncpe.digitaldelivery.codegenerator.entity.RolePermission;
-import com.ncpe.digitaldelivery.codegenerator.mapper.RolePermissionMapper;
-import com.ncpe.digitaldelivery.codegenerator.service.RolePermissionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.sy.springbootshirodemo.entity.RolePermission;
+import com.sy.springbootshirodemo.mapper.RolePermissionMapper;
+import com.sy.springbootshirodemo.service.RolePermissionService;
 import org.springframework.stereotype.Service;
 
 /**

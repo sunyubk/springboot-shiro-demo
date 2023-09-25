@@ -1,7 +1,7 @@
-package com.ncpe.digitaldelivery.codegenerator.service;
+package com.sy.springbootshirodemo.service;
 
-import com.ncpe.digitaldelivery.codegenerator.entity.Role;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.sy.springbootshirodemo.entity.Role;
 
 /**
  * <p>

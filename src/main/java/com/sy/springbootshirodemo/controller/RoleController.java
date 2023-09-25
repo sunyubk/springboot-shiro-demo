@@ -1,12 +1,12 @@
-package com.ncpe.digitaldelivery.codegenerator.controller;
+package com.sy.springbootshirodemo.controller;
 
-import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.sy.springbootshirodemo.entity.Role;
+import com.sy.springbootshirodemo.service.RoleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import com.ncpe.digitaldelivery.codegenerator.service.RoleService;
-import com.ncpe.digitaldelivery.codegenerator.entity.Role;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>

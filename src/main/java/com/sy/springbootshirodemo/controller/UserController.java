@@ -1,12 +1,18 @@
-package com.ncpe.digitaldelivery.codegenerator.controller;
+package com.sy.springbootshirodemo.controller;
 
-import org.springframework.web.bind.annotation.*;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.sy.springbootshirodemo.common.Result;
+import com.sy.springbootshirodemo.entity.User;
+import com.sy.springbootshirodemo.entity.param.LoginParam;
+import com.sy.springbootshirodemo.service.UserService;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import com.ncpe.digitaldelivery.codegenerator.service.UserService;
-import com.ncpe.digitaldelivery.codegenerator.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -37,6 +43,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/{id}")
+    @RequiresPermissions(value = "user:getById")
     public ResponseEntity<User> getById(@PathVariable("id") String id) {
         return new ResponseEntity<>(userService.getById(id), HttpStatus.OK);
     }
@@ -58,4 +65,34 @@ public class UserController {
         userService.updateById(params);
         return new ResponseEntity<>("updated successfully", HttpStatus.OK);
     }
+
+    @PostMapping("/login")
+    public Result login( @RequestBody LoginParam loginParam) {
+        // 获取当前主体对象
+        Subject subject = SecurityUtils.getSubject();
+
+        // 创建用户名密码令牌
+        UsernamePasswordToken token = new UsernamePasswordToken(loginParam.getUsername(), loginParam.getPassword());
+
+        try {
+            // 调用主体的登录方法进行认证
+            subject.login(token);
+
+            // 登录成功，返回成功标识
+            return new Result(200, "登录成功", null);
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            // 登录失败，重定向到登录页面
+            return new Result(500, "登录失败", null);
+        }
+    }
+
+    @PostMapping("/register")
+    public Result register(String username, String password) {
+
+        User user = userService.register(username, password);
+        return new Result(200, "注册成功", user);
+    }
+
 }
